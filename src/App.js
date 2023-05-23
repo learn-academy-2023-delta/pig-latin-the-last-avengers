@@ -33,21 +33,40 @@ const App = () => {
 
       // ACTION ITEM: your Pig Latin logic goes here!
       //translatedWordsArray.map
-       if(vowelsArray.includes(eachWord[0])){
-      var latinWord = eachWord + 'way'
-        } else {
-        return eachWord 
+      
+       const slicing = (word) => {
+        for (let i = 0; i < word.length; i++){
+         let temp = word.slice(0, i + 1)
+            if(temp.includes('qu')){
+           let newWord = word.slice(i + 1) + word.slice(0, i + 1) + 'ay'
+           return newWord
+            }
         }
+       }
+      
+
+      const language = () => {
+       if(vowelsArray.includes(eachWord[0])){
+         return eachWord + 'way'
+        } else if(slicing(eachWord) !== false ) {
+       // return eachWord 
+       return slicing(eachWord)
+         } else {
+          return 'does not work'
+         }
+        }
+      
       
       
 
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       //return eachWord[0]
-      return latinWord
+      return language()
     })
 
     // NO MODIFICATION NEEDED: once the code has been modified it gets joined from an array back to a string
+   
     const translatedWords = translatedWordsArray.join(" ")
     console.log("translatedWords:", translatedWords)
 
