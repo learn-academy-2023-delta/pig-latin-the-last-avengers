@@ -1,4 +1,4 @@
-# Story 1
+### Story 1
 -Accept input of word that begins with a vowel
   this already works
   
@@ -11,7 +11,7 @@
   add `way` to the end of `eachWord`
   return the result
   
-  # Story 2
+  ### Story 2
   - Can type any word that has a "qu" in the first syllable in the text input (e.g. squeal)
       Already works
       
@@ -28,4 +28,5 @@
       if first slice contains 'qu' before we hit a vowel
         move letters to the end of the word and add 'ay'
         
-        
+### Story 3
+
