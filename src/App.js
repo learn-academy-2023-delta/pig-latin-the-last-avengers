@@ -40,7 +40,9 @@ const App = () => {
             if(temp.includes('qu')){
            let newWord = word.slice(i + 1) + word.slice(0, i + 1) + 'ay'
            return newWord
+             
             }
+            
         }
        }
       
@@ -48,13 +50,14 @@ const App = () => {
       const language = () => {
        if(vowelsArray.includes(eachWord[0])){
          return eachWord + 'way'
-        } else if(slicing(eachWord) !== false ) {
+        } else if(slicing(eachWord)) {
        // return eachWord 
        return slicing(eachWord)
          } else {
-          return 'does not work'
+          return eachWord
          }
         }
+
       
       
       
